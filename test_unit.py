@@ -38,7 +38,7 @@ class TestProductModel:
             product.validate_price()
     
     def test_product_with_zero_price(self):
-        """Test edge case: zero price (should be valid)"""
+        """Test edge case: zero price"""
         product = Product(name="Free Item", price=0.00)
         assert product.validate_price() is True # Should pass
 
@@ -46,7 +46,7 @@ class TestUtilityFunctions:
     """Additional unit tests for any utility functions"""
     
     def test_price_formatting(self):
-        """Test a utility function (if you had one)"""
+        """Test a utility function"""
         # This is just a demonstration
         def format_price(price):
             return f"${price:.2f}"
@@ -55,3 +55,4 @@ class TestUtilityFunctions:
         assert format_price(0) == "$0.00"
 
         assert format_price(99.99) == "$99.99"
+
