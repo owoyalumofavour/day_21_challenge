@@ -18,7 +18,7 @@ class TestUserModel:
         
         assert user.username == "testuser"
         assert user.email == "test@example.com"
-        assert user.password == "securepass123"
+        assert user.password == "secure23"
         assert user.id is None # ID is None until saved to database
 
 class TestProductModel:
@@ -47,10 +47,11 @@ class TestUtilityFunctions:
     
     def test_price_formatting(self):
         """Test a utility function (if you had one)"""
-        # This is just a demonstration - you could add more complex logic
+        # This is just a demonstration
         def format_price(price):
             return f"${price:.2f}"
         
         assert format_price(10.5) == "$10.50"
         assert format_price(0) == "$0.00"
+
         assert format_price(99.99) == "$99.99"
